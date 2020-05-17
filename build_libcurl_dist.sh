@@ -47,7 +47,8 @@ function build_for_arch() {
   CPP="$CC -E"
   export CC
   export CPP
-  export CFLAGS="-Os -miphoneos-version-min=${IPHONEOS_DEPLOYMENT_TARGET} -isysroot ${SDKROOT}"
+  #ah:  where should I add those user settings ?? ENABLE_BITCODE=YES, BITCODE_GENERATION_MODE=bitcode, OTHER_CFLAGS="-fembed-bitcode" <- -fembed-bitcode worked alone.
+  export CFLAGS="-Os -miphoneos-version-min=${IPHONEOS_DEPLOYMENT_TARGET} -isysroot ${SDKROOT} -fembed-bitcode"
   export CPPFLAGS="-arch ${ARCH} -I${SDKROOT}/usr/include"
   export LDFLAGS="-arch ${ARCH} -isysroot ${SDKROOT}"
 
@@ -127,8 +128,6 @@ if ! diff -r "${TMP_DIR}"/{x86_64,arm64}/include > /dev/null 2>&1 ; then
     echo "Error: The generated /include directories are not identical"
     exit 2
 fi
-
-echo
 
 xcrun xcodebuild -create-xcframework \
   "${LIB_ARGS[@]}" \

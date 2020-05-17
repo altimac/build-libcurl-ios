@@ -1,3 +1,10 @@
+MOST OF THIS WORKED. Except the script was failing to grep the curl version.
+My fix is simply to hardcode the CURL_VERSION number 
+#AH: this does not work, so i've hardcoded the curl version instead
+#CURL_VERSION=$(grep -i CURLVERSION "$CURLDIR/Makefile")
+#CURL_VERSION="${CURL_VERSION//CURLVERSION = /}"
+CURL_VERSION="7.69.1"
+
 # libcurl for iOS
 
 Build libcurl for iOS development.

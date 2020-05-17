@@ -19,8 +19,10 @@ if [ ! -d "$CURLDIR" ]; then
   exit 1
 fi
 
-CURL_VERSION=$(grep -i CURLVERSION "$CURLDIR/Makefile")
-CURL_VERSION="${CURL_VERSION//CURLVERSION = /}"
+#AH: this does not work, so i've hardcoded the curl version instead
+#CURL_VERSION=$(grep -i CURLVERSION "$CURLDIR/Makefile") 
+#CURL_VERSION="${CURL_VERSION//CURLVERSION = /}"
+CURL_VERSION="7.69.1"
 
 CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 

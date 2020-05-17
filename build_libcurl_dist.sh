@@ -75,7 +75,7 @@ function build_for_arch() {
     --disable-ares \
     \
     --enable-http \
-    --disable-ftp \
+    --enable-ftp \
     --disable-file \
     --disable-ldap \
     --disable-ldaps \
@@ -83,7 +83,7 @@ function build_for_arch() {
     --disable-proxy \
     --disable-dict \
     --disable-telnet \
-    --disable-tftp \
+    --enable-tftp \
     --disable-pop3 \
     --disable-imap \
     --disable-smb \

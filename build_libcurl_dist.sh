@@ -2,9 +2,9 @@
 
 readonly XCODE_DEV="$(xcode-select -p)"
 export DEVROOT="${XCODE_DEV}/Toolchains/XcodeDefault.xctoolchain"
+CURRENT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 DFT_DIST_DIR="${CURRENT_DIR}/dist"
-#DIST_DIR=${DIST_DIR:-$DFT_DIST_DIR}
-DIST_DIR=$DFT_DIST_DIR
+DIST_DIR=${DIST_DIR:-$DFT_DIST_DIR}
 
 function build_for_arch() {
   ARCH=$1

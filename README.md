@@ -6,6 +6,8 @@ My fix is simply to hardcode the CURL_VERSION number :
 //CURL_VERSION="${CURL_VERSION//CURLVERSION = /}"
 CURL_VERSION="7.69.1"
 
+I'm also targeting iOS 10 and armv7 architecture.
+
 Also, if you have a problem when compiling such as "configure: error: C compiler cannot create executables", then
 Ensures the path to Xcode.app bundle is without space or strange characters. I had Xcode installed in ~/Downloads/Last Dev Tools/ folder, so with spaces and renaming the folder to LastDevTools fixed this (after resetting xcode-select -p though)
 

@@ -6,12 +6,13 @@ My fix is simply to hardcode the CURL_VERSION number :
 //CURL_VERSION="${CURL_VERSION//CURLVERSION = /}"
 CURL_VERSION="7.69.1"
 
-I'm also targeting iOS 10 and armv7 architecture.
-
 Also, if you have a problem when compiling such as "configure: error: C compiler cannot create executables", then
 Ensures the path to Xcode.app bundle is without space or strange characters. I had Xcode installed in ~/Downloads/Last Dev Tools/ folder, so with spaces and renaming the folder to LastDevTools fixed this (after resetting xcode-select -p though)
 
 I've also changed the way the framework is built so that it supports BITCODE that is more or less needed in 2020.
+
+I also wanted to target the armv7 architecture, but it seems it's not possible with XCFramework :-(
+So i've added another branch "no_XCFramework_but_with_armv7" that simply creates a static lib, which supports armv7 :-(
 
 # libcurl for iOS
 

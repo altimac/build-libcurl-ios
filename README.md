@@ -9,6 +9,8 @@ CURL_VERSION="7.69.1"
 Also, if you have a problem when compiling such as "configure: error: C compiler cannot create executables", then
 Ensures the path to Xcode.app bundle is without space or strange characters. I had Xcode installed in ~/Downloads/Last Dev Tools/ folder, so with spaces and renaming the folder to LastDevTools fixed this (after resetting xcode-select -p though)
 
+I've also changed the way the framework is built so that it supports BITCODE that is more or less needed in 2020.
+
 # libcurl for iOS
 
 Build libcurl for iOS development.

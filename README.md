@@ -11,8 +11,8 @@ Ensures the path to Xcode.app bundle is without space or strange characters. I h
 
 I've also changed the way the framework is built so that it supports BITCODE that is more or less needed in 2020.
 
-I also wanted to target the armv7 architecture, but it seems it's not possible with XCFramework :-(
-So i've added another branch "no_XCFramework_but_with_armv7" that simply creates a static lib, which supports armv7 :-(
+**I also wanted to target the armv7 architecture, but it seems it's not possible with XCFramework :-(
+So i've added another branch "no_XCFramework_but_with_armv7" that simply creates a static lib, which supports armv7 :-( at the end this is the branch I'm using in most of my projects...**
 
 # libcurl for iOS
 
